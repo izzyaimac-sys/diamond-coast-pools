@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Website Audit | Sidecar - Your Growth Co-Pilot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0D7377 0%, #095a5d 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .logo h1 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .logo p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .form-container h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .form-container > p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #0D7377;
+        }
+        
+        select {
+            cursor: pointer;
+            background: white;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .checkbox-item:hover {
+            border-color: #0D7377;
+            background: #f8fffe;
+        }
+        
+        .checkbox-item input[type="radio"] {
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+            accent-color: #0D7377;
+        }
+        
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 400;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #0D7377;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .submit-btn:hover {
+            background: #095a5d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(13,115,119,0.3);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .trust-item {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .trust-item strong {
+            display: block;
+            color: #0D7377;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 26px;
+            }
+            
+            .form-container {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">🛵</div>
+            <h1>Sidecar</h1>
+            <p>Your Growth Co-Pilot</p>
+        </div>
+        
+        <div class="hero">
+            <span class="badge">🎯 Free 60-Second Audit</span>
+            <h2>See How Your Business is Really Doing Online</h2>
+            <p>Get a personalized website audit + 90-day growth forecast. Know exactly what to fix to get more customers.</p>
+        </div>
+        
+        <div class="form-container">
+            <h3>Unlock Your Free Audit</h3>
+            <p>Takes 60 seconds. Delivered in 5 minutes.</p>
+            
+            <!-- GOOGLE FORM EMBED -->
+            <!-- Replace the form action with your Google Form URL -->
+            <form action="YOUR_GOOGLE_FORM_URL" method="POST" target="_blank">
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="entry.123456789" required placeholder="John Smith">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="entry.987654321" required placeholder="john@yourbusiness.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="entry.111111111" required placeholder="(281) 555-0199">
+                </div>
+                
+                <div class="form-group">
+                    <label for="business">Business Name *</label>
+                    <input type="text" id="business" name="entry.222222222" required placeholder="ABC Landscaping">
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Website URL *</label>
+                    <input type="url" id="website" name="entry.333333333" required placeholder="https://yourbusiness.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>What's your biggest challenge getting customers online? *</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="radio" id="challenge1" name="entry.444444444" value="Not showing up on Google" required>
+                            <label for="challenge1">Not showing up on Google</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="challenge2" name="entry.444444444" value="Bad reviews hurting business">
+                            <label for="challenge2">Bad reviews hurting business</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="challenge3" name="entry.444444444" value="Website not getting traffic">
+                            <label for="challenge3">Website not getting traffic</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="challenge4" name="entry.444444444" value="Don't know what competitors are doing">
+                            <label for="challenge4">Don't know what competitors are doing</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="challenge5" name="entry.444444444" value="Other">
+                            <label for="challenge5">Something else</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Get My Free Audit →
+                </button>
+            </form>
+            
+            <div class="trust-badges">
+                <div class="trust-item">
+                    <strong>60</strong>
+                    Second Audit
+                </div>
+                    <div class="trust-item">
+                    <strong>100%</strong>
+                    Free
+                </div>
+                <div class="trust-item">
+                    <strong>No</strong>
+                    Spam Ever
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Questions? Text or call: <a href="tel:281-555-0199">(281) 555-0199</a></p>
+            <p style="margin-top: 10px;">© 2024 Sidecar. Your growth co-pilot.</p>
+        </div>
+    </div>
+</body>
+</html>

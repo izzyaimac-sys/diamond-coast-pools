@@ -1,0 +1,29 @@
+Write a monthly growth report for Mike's Pool Service.
+
+THE NUMBERS:
+- 139 website visitors this month
+- 408 Google searches showed their business  
+- 4.3 stars (4 new reviews)
+
+FORMAT:
+
+THE SCOREBOARD
+• website visitors (up from last month)
+• Google searches showed their business
+• specific win like reviews
+
+WHAT IS WORKING
+2 sentences celebrating the win. Explain why it matters in plain English.
+
+NEXT MOVES  
+2 sentences. One thing to fix. One specific action to take this week.
+
+RULES:
+- 120 words max
+- No jargon like SEO or optimization
+- Sound like texting a friend who owns a business
+- Use contractions like you're and it's
+- Never say I suggest or You should
+- End with: Hit reply if you want me to [specific action].
+
+EXAMPLE GOOD ENDING: Hit reply if you want me to move your phone number to the top of your homepage.

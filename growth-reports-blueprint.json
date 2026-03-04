@@ -1,0 +1,95 @@
+{
+  "name": "Growth Reports - Data Collection",
+  "flow": [
+    {
+      "id": 1,
+      "module": "google-sheets:searchRows",
+      "version": 4,
+      "parameters": {
+        "spreadsheet": "YOUR_SPREADSHEET_ID",
+        "sheet": "Clients",
+        "filterType": "and",
+        "filters": [
+          {
+            "column": "G",
+            "operator": "eq",
+            "value": "Active"
+          }
+        ],
+        "limit": 10
+      },
+      "mapper": {
+        "name": "{{1.A}}",
+        "businessType": "{{1.B}}",
+        "website": "{{1.C}}",
+        "gaPropertyId": "{{1.D}}",
+        "gbpLocationId": "{{1.E}}",
+        "email": "{{1.F}}",
+        "status": "{{1.G}}"
+      }
+    },
+    {
+      "id": 2,
+      "module": "http:makeARequest",
+      "version": 2,
+      "parameters": {
+        "url": "https://analyticsdata.googleapis.com/v1beta/properties/{{1.D}}:runReport",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Bearer {{googleAuth.token}}"
+          },
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "dateRanges": [
+            {
+              "startDate": "28daysAgo",
+              "endDate": "yesterday"
+            }
+          ],
+          "metrics": [
+            {
+              "name": "sessions"
+            },
+            {
+              "name": "totalUsers"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "module": "google-sheets:addRow",
+      "version": 4,
+      "parameters": {
+        "spreadsheet": "YOUR_SPREADSHEET_ID",
+        "sheet": "Monthly Metrics",
+        "values": [
+          "{{1.A}}",
+          "{{formatDate(now; \"YYYY-MM\")}}",
+          "{{2.totalUsers}}",
+          "{{2.sessions}}",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    }
+  ],
+  "scheduling": {
+    "type": "schedule",
+    "schedule": {
+      "type": "monthly",
+      "days": [1],
+      "times": ["09:00"]
+    }
+  }
+}
