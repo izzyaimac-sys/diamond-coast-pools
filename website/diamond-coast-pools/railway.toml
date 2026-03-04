@@ -1,0 +1,26 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "npm start"
+restartPolicyType = "always"
+
+[env]
+NODE_ENV = "production"
+DATABASE_URL = "${{Postgres.DATABASE_URL}}"
+
+[[services]]
+internal_port = 3000
+protocol = "http"
+
+  [services.healthchecks]
+  [services.healthchecks.liveness]
+  path = "/"
+  interval = "10s"
+  timeout = "5s"
+  
+  [services.healthchecks.readiness]
+  path = "/"
+  interval = "5s"
+  timeout = "3s"
