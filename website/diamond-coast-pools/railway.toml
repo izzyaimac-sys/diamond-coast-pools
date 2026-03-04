@@ -2,6 +2,9 @@
 builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
+[build.env]
+RAILPACK_BUILDER = "dockerfile"
+
 [deploy]
 startCommand = "npm start"
 restartPolicyType = "always"
